@@ -1,0 +1,49 @@
+# overrides for joy
+
+battery {
+    charging -> self.get_battery_charging()
+    level -> self.get_battery_level()
+}
+ 
+# buttons on the right joycon
+buttons.right.y  -> self.get_button_y()
+buttons.right.x  -> self.get_button_x()
+buttons.right.b  -> self.get_button_b()
+buttons.right.a  -> self.get_button_a()
+buttons.right.r  -> self.get_button_r()
+buttons.right.zr -> self.get_button_zr()
+
+# shared buttons
+buttons.shared.minus    -> self.get_button_minus()
+buttons.shared.plus     -> self.get_button_plus()
+buttons.shared.r-stick  -> self.get_button_r_stick()
+buttons.shared.l-stick  -> self.get_button_l_stick()
+buttons.shared.home     -> self.get_button_home()
+buttons.shared.capture  -> self.get_button_capture()
+    
+# buttons on the left joycon
+buttons.left.down   -> self.get_button_down()
+buttons.left.up     -> self.get_button_up()
+buttons.left.right  -> self.get_button_right()
+buttons.left.left   -> self.get_button_left()
+buttons.left.l      -> self.get_button_l()
+buttons.left.zl     -> self.get_button_zl()
+
+# analog actions on the left controller
+analog-sticks.horizontal.max -> self.get_stick_left_horizontal()
+analog-sticks.horizontal.min -> self.get_stick_left_horizontal()
+analog-sticks.vertical.max   -> self.get_stick_left_vertical()
+analog-sticks.vertical.min   -> self.get_stick_left_vertical()
+
+## in the future
+# accel {
+#     x -> self.get_accel_x()
+#     y -> self.get_accel_y()
+#     z -> self.get_accel_z()
+# },
+# 
+# gyro {
+#     x -> self.get_gyro_x()
+#     y -> self.get_gyro_y()
+#     z -> self.get_gyro_z()
+# }
