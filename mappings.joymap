@@ -2,11 +2,11 @@
  
 # buttons on the right joycon
 buttons.right.x  -> key.e
-buttons.right.b  -> key.shift
+buttons.right.b  -> hold.shift
 buttons.right.a  -> key.space
 # buttons.right.y  -> .
 # buttons.right.r  -> .
-buttons.right.zr -> mouse.button-rtclick
+buttons.right.zr -> mouse.button-lfclick
 buttons.right.sl -> joy.enable-type-mode
 # buttons.right.sr -> .
 
@@ -27,10 +27,10 @@ buttons.left.right  -> key.backspace
 buttons.left.zl     -> mouse.click
 
 # analog actions on the left controller
-analog-sticks.left.h-max   -> key.d
-analog-sticks.left.h-min   -> key.a
-analog-sticks.left.v-max   -> key.w
-analog-sticks.left.v-min   -> key.s
+analog-sticks.left.h-max   -> hold.d
+analog-sticks.left.h-min   -> hold.a
+analog-sticks.left.v-max   -> hold.w
+analog-sticks.left.v-min   -> hold.s
 
 mouse.pos.vel  -> analog-sticks.right
 

@@ -95,6 +95,9 @@ cld = False
 dlkey = False
 tmkey = False
 
+# hold
+lshct = []
+
 def sorg(v):
     return "h:["+str(round(v["left"]["horizontal"]/1000)-2)+", "+str(round(v["left"]["vertical"]/1000)-2)+"] v:["+str(round(v["right"]["horizontal"]/1000)-2)+", "+str(round(v["right"]["vertical"]/1000)-2)+"]"
 
@@ -109,6 +112,19 @@ def execute(mol):
             if (mol[1] == "button-rtclick"): pydirectinput.doubleClick()
             if (mol[1] == "button-mdclick"): pydirectinput.middleClick()
             if (mol[1] == "button-tpclick"): pydirectinput.tripleClick()
+        if (mol[0] == "hold"):
+            pydirectinput.keyDown(mol[1])
+            found = False
+            for x in lshct:
+                if (x["key"] == mol[1]):
+                    x["last-frame"] = True
+                    found = True
+                    break
+            if not found:
+                lshct.append({
+                    "key":mol[1],
+                    "last-frame":True
+                })
 
 def mapr(right, left, registar):
     if (right["buttons"]["right"]["x" ]):  execute(registar["buttons"]["right"]["x" ])
@@ -230,7 +246,14 @@ while True:
         if joyconl.get_status()["buttons"]["left"]["sr"]:
             typemode = False
     else: 
-       mapr(joyconr.get_status(), joyconl.get_status(), registar) 
+        mapr(joyconr.get_status(), joyconl.get_status(), registar) 
+        fasdy = []
+        for x in lshct:
+            if not x["last-frame"]:
+                pydirectinput.keyUp(x["key"])
+            else:
+                x["last-frame"] = False
+                fasdy.append(x)
     
     
     
