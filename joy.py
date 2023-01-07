@@ -109,7 +109,7 @@ def execute(mol):
             if (mol[1] == "button-click"): pydirectinput.click()
             if (mol[1] == "button-dbclick"): pydirectinput.doubleClick()
             if (mol[1] == "button-lfclick"): pydirectinput.leftClick()
-            if (mol[1] == "button-rtclick"): pydirectinput.doubleClick()
+            if (mol[1] == "button-rtclick"): pydirectinput.rightClick()
             if (mol[1] == "button-mdclick"): pydirectinput.middleClick()
             if (mol[1] == "button-tpclick"): pydirectinput.tripleClick()
         if (mol[0] == "hold"):
@@ -158,10 +158,10 @@ def mapr(right, left, registar):
     if ((round(jorrstatus["right"]["vertical"]/1000)-2)>1):  execute(registar["analog-sticks"]["right"]["v-max" ])
     if ((round(jorrstatus["right"]["vertical"]/1000)-2)>-1):  execute(registar["analog-sticks"]["right"]["v-min" ])
     # -- mouse
-    speed = 32
+    speed = 52
     if (len(registar["mouse"]["pos"]["vel"])>1 and registar["mouse"]["pos"]["vel"][0] != "none"): pyautogui.move(
         (round(jorrstatus[registar["mouse"]["pos"]["vel"][1]]["horizontal"]/1000)-2)*speed,
-        (round(jorrstatus[registar["mouse"]["pos"]["vel"][1]]["vertical"]/1000)-2)*-speed,0.1)
+        (round(jorrstatus[registar["mouse"]["pos"]["vel"][1]]["vertical"]/1000)-2)*-speed)
 
 while True:
     # jorrstatus = joyconr.get_status()["analog-sticks"]
@@ -254,7 +254,6 @@ while True:
             else:
                 x["last-frame"] = False
                 fasdy.append(x)
-    
     
     
 # dbclick

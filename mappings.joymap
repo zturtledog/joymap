@@ -24,7 +24,7 @@ buttons.shared.capture  -> key.f12
 buttons.left.right  -> key.backspace
 # buttons.left.left   -> .
 # buttons.left.l      -> . 
-buttons.left.zl     -> mouse.click
+buttons.left.zl     -> mouse.button-rtclick
 
 # analog actions on the left controller
 analog-sticks.left.h-max   -> hold.d
