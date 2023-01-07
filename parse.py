@@ -1,3 +1,5 @@
+import clutil as cl
+
 with open("./mappings.joymap", "r+") as file:
     uprolns = file.read().split("\n")
     lines = []
@@ -7,7 +9,10 @@ with open("./mappings.joymap", "r+") as file:
             "val":x.split("->")[1].strip().split(".")
         })
     for x in lines:
-        registar[x["key"][0]][x["key"][1]][x["key"][2]] = x["val"]
+        try:
+            registar[x["key"][0]][x["key"][1]][x["key"][2]] = x["val"]
+        except:
+            print(cl.fg.red+"invalid maping key"+cl.reset)
 
 registar = {
     "buttons": {
