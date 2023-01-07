@@ -6,62 +6,54 @@ with open("./mappings.joymap", "r+") as file:
             "key":x.split("->")[0].strip().split("."),
             "val":x.split("->")[1].strip().split(".")
         })
-    print(lines)
+    for x in lines:
+        registar[x["key"][0]][x["key"][1]][x["key"][2]] = x["val"]
 
 registar = {
     "buttons": {
         "right": {
-            "x"  : "key.e",
-            "b"  : "key.shift",
-            "a"  : "key.space",
+            "x"  : "",
+            "b"  : "",
+            "a"  : "",
             "y"  : "",
             "r"  : "",
             "zr" : "",
-            "sl" : "joy.enable-type-mode",
-            "sr" : "joy.disable-type-mode"
+            "sl" : "",
+            "sr" : ""
         },
         "shared": {
-            "plus"     : "key.escape",
-            "l-stick"  : "key.ctrl",
-            "capture"  : "key.f12",
+            "plus"     : "",
+            "l-stick"  : "",
+            "capture"  : "",
             "minus"    : "",
             "home"     : "",
             "r-stick"  : ""
         },
         "left": {
-            "down"   : "mouse.button-click",
-            "up"     : "mouse.button-dbclick",
-            "right"  : "key.backspace",
+            "down"   : "",
+            "up"     : "",
+            "right"  : "",
             "left"   : "",
             "l"      : "",
             "zl"     : ""
         }
     },
-
     "analog-sticks": {
         "left": {
-            "horizontal": {
-                "max"     : "key.d",
-                "min"     : "key.a",
-                "vector"  : ""
-            },
-            "vertical": {
-                "max"       : "key.w",
-                "min"       : "key.s",
-                "vector"    : ""
-            }
+            "h-max"     : "",
+            "h-min"     : "",
+            "h-vector"  : "",
+            "v-max"       : "",
+            "v-min"       : "",
+            "v-vector"    : ""
         },
         "right": {
-            "horizontal": {
-                "max"    : ".",
-                "min"    : ".",
-                "vector" : "mouse.velocity-y"
-            },
-            "vertical": {
-                "max"    : "",
-                "min"    : "",
-                "vector" : "mouse.velocity-x"
-            }
+            "h-max"    : "",
+            "h-min"    : "",
+            "h-vector" : "",
+            "v-max"    : "",
+            "v-min"    : "",
+            "v-vector" : ""
         }
     }
 }
