@@ -1,7 +1,8 @@
 # joymap
 
 a mappings engine for nintendo switch joycons (joycons must be bluetooth paired (should be universal but guaranteed on windows))/
-some programs will steal focus from the program, sometimes there are workarounds. this program also doesn't work very well.
+some programs will steal focus from the program, sometimes there are workarounds. this program also doesn't work very well./
+if the joycon times out, restart the program.
 
 ## typing with joycons
 to enter typeing mode press sl on the left joycon.\
