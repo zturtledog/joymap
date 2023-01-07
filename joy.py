@@ -159,7 +159,7 @@ def mapr(right, left, registar):
     if ((round(jorrstatus["right"]["vertical"]/1000)-2)>-1):  execute(registar["analog-sticks"]["right"]["v-min" ])
     # -- mouse
     speed = 52
-    if (len(registar["mouse"]["pos"]["vel"])>1 and registar["mouse"]["pos"]["vel"][0] != "none"): pyautogui.move(
+    if (len(registar["mouse"]["pos"]["vel"])>1 and registar["mouse"]["pos"]["vel"][0] != "none"): pydirectinput.move(
         (round(jorrstatus[registar["mouse"]["pos"]["vel"][1]]["horizontal"]/1000)-2)*speed,
         (round(jorrstatus[registar["mouse"]["pos"]["vel"][1]]["vertical"]/1000)-2)*-speed)
 
