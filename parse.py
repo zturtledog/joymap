@@ -1,19 +1,5 @@
 import clutil as cl
 
-with open("./mappings.joymap", "r+") as file:
-    uprolns = file.read().split("\n")
-    lines = []
-    for x in uprolns:
-        if (len(x.strip()) > 0 and not x.strip().startswith("#")): lines.append({
-            "key":x.split("->")[0].strip().split("."),
-            "val":x.split("->")[1].strip().split(".")
-        })
-    for x in lines:
-        try:
-            registar[x["key"][0]][x["key"][1]][x["key"][2]] = x["val"]
-        except:
-            print(cl.fg.red+"invalid maping key"+cl.reset)
-
 registar = {
     "buttons": {
         "right": {
@@ -62,3 +48,19 @@ registar = {
         }
     }
 }
+
+with open("./mappings.joymap", "r+") as file:
+    uprolns = file.read().split("\n")
+    lines = []
+    for x in uprolns:
+        if (len(x.strip()) > 0 and not x.strip().startswith("#")): lines.append({
+            "key":x.split("->")[0].strip().split("."),
+            "val":x.split("->")[1].strip().split(".")
+        })
+    for x in lines:
+        try:
+            registar[x["key"][0]][x["key"][1]][x["key"][2]] = x["val"]
+        except:
+            print(cl.fg.red+"invalid maping key"+cl.reset)
+    print (registar)
+

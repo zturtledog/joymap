@@ -6,9 +6,9 @@ buttons.right.b  -> key.shift
 buttons.right.a  -> key.space
 # buttons.right.y  -> .
 # buttons.right.r  -> .
-# buttons.right.zr -> .
+buttons.right.zr -> mouse.button-rtclick
 buttons.right.sl -> joy.enable-type-mode
-# buttons.right.sr -> joy.disable-type-mode
+# buttons.right.sr -> .
 
 # shared buttons
 buttons.shared.plus     -> key.escape
@@ -19,26 +19,20 @@ buttons.shared.capture  -> key.f12
 # buttons.shared.r-stick  -> .
     
 # buttons on the left joycon
-buttons.left.down   -> mouse.button-click
-buttons.left.up     -> mouse.button-dbclick
+# buttons.left.down   -> 
+# buttons.left.up     -> 
 buttons.left.right  -> key.backspace
 # buttons.left.left   -> .
-# buttons.left.l      -> .
-# buttons.left.zl     -> .
+# buttons.left.l      -> . 
+buttons.left.zl     -> mouse.click
 
 # analog actions on the left controller
-analog-sticks.left.horizontal.max     -> key.d
-analog-sticks.left.horizontal.min     -> key.a
-# analog-sticks.left.horizontal.vector -> .
-analog-sticks.left.vertical.max       -> key.w
-analog-sticks.left.vertical.min       -> key.s
-# analog-sticks.left.vertical.vector   -> .
-# analog-sticks.right.horizontal.max  -> .
-# analog-sticks.right.horizontal.min  -> .
-analog-sticks.right.horizontal.vector -> mouse.velocity-y
-# analog-sticks.right.vertical.max    -> .
-# analog-sticks.right.vertical.min    -> .
-analog-sticks.right.vertical.vector   -> mouse.velocity-x
+analog-sticks.left.h-max   -> key.d
+analog-sticks.left.h-min   -> key.a
+analog-sticks.left.v-max   -> key.w
+analog-sticks.left.v-min   -> key.s
+
+mouse.pos.vel  -> analog-sticks.right
 
 ## in the future
 # accel {
