@@ -3,7 +3,7 @@
 # buttons on the right joycon
 buttons.right.x  -> key.e
 buttons.right.b  -> hold.shift
-buttons.right.a  -> key.space
+buttons.right.a  -> hold.space
 # buttons.right.y  -> .
 # buttons.right.r  -> .
 buttons.right.zr -> mouse.button-lfclick
@@ -12,7 +12,7 @@ buttons.right.sl -> joy.enable-type-mode
 
 # shared buttons
 buttons.shared.plus     -> key.escape
-buttons.shared.l-stick  -> key.ctrl
+buttons.shared.l-stick  -> hold.ctrl
 buttons.shared.capture  -> key.f12
 # buttons.shared.minus    -> .
 # buttons.shared.home     -> .
@@ -21,7 +21,7 @@ buttons.shared.capture  -> key.f12
 # buttons on the left joycon
 # buttons.left.down   -> 
 # buttons.left.up     -> 
-buttons.left.right  -> key.backspace
+# buttons.left.right  -> key.backspace
 # buttons.left.left   -> .
 # buttons.left.l      -> . 
 buttons.left.zl     -> mouse.button-rtclick
